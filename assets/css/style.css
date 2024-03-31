@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+.container {
+  padding: 1rem;
+  margin: auto;
+}
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.container header .notifications {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.container header .notifications h2 {
+  font-size: 20px;
+}
+.container header .notifications span {
+  font-weight: 500;
+  font-size: 18px;
+  background: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.container header .mark-all {
+  letter-spacing: -1px;
+}
+.container header .mark-all:hover {
+  color: hsl(219, 85%, 26%);
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+  .container header {
+    margin-bottom: 1.5rem;
+  }
+  .container header .notifications h2 {
+    font-size: 25px;
+  }
+  .container header .notifications span {
+    font-size: 18px;
+  }
+  .container header .mark-all {
+    font-size: 19px;
+    cursor: pointer;
+  }
+}
+.container main .msgs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container main .msgs .msg {
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.container main .msgs .msg .msg-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.container main .msgs .msg.unread {
+  background: hsl(210, 60%, 98%);
+  cursor: pointer;
+}
+.container main .msgs .msg.unread .content p.p-msg {
+  letter-spacing: -1px;
+  position: relative;
+}
+.container main .msgs .msg.unread .content p.p-msg::after {
+  position: absolute;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(1, 90%, 64%);
+  display: inline-block;
+}
+.container main .msgs .msg:nth-child(4) p.msg-text {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid hsl(205, 33%, 90%);
+}
+.container main .msgs .msg:nth-child(4) p.msg-text:hover {
+  background: hsl(211, 68%, 94%);
+}
+.container main .msgs .msg:nth-child(5) {
+  align-items: center;
+}
+.container main .msgs .msg img {
+  width: 40px;
+}
+.container main .msgs .msg .content p strong {
+  cursor: pointer;
+}
+.container main .msgs .msg .content p strong:hover {
+  color: hsl(219, 85%, 26%);
+}
+.container main .msgs .msg .content p b {
+  cursor: pointer;
+}
+.container main .msgs .msg .content p b:hover {
+  color: hsl(219, 85%, 26%);
+}
+.container main .msgs .msg img.img-content {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.container main .msgs .msg img.img-content:hover {
+  outline: 2px solid hsl(205, 33%, 90%);
+}
+@media (min-width: 768px) {
+  .container main .msgs .msg {
+    padding: 1rem;
+  }
+}
+
+footer .attribution {
+  padding: 1rem;
+  text-align: center;
+  font-size: 11px;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
